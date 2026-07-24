@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap');
+@import "tailwindcss";
+
+@utility scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #D4A937;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #B88922;
+  }
+}
+
+@theme {
+  --color-brand-crimson: #9E1C22;
+  --color-brand-crimson-hover: #84171C;
+  --color-brand-blue: #1E3FAF;
+  --color-brand-blue-hover: #17328C;
+  --color-brand-navy: #0F1F46;
+  --color-brand-gold: #D4A937;
+  --color-brand-ivory: #F8F4EC;
+
+  /* Legacy aliases to avoid breaking components immediately, but updated to new values */
+  --color-primary-navy: var(--color-brand-navy);
+  --color-primary-blue: var(--color-brand-blue);
+  --color-accent-gold: var(--color-brand-gold);
+  --color-accent-sand: #EFE7D8; /* Soft Sand */
+  --color-neutral-grey: #EEF2F7; /* Mist Grey */
+  --color-text-dark: #121212; /* Neutral 900 */
+  --color-text-medium: #6B7280; /* Neutral 500 */
+
+  /* Extended Palette */
+  --color-burgundy: #7D1620;
+  --color-scholar-blue: #365FD9;
+  --color-ceremonial-gold: #B88922;
+  --color-soft-sand: #EFE7D8;
+  --color-mist-grey: #EEF2F7;
+
+  /* Neutrals */
+  --color-neutral-900: #121212;
+  --color-neutral-800: #1F2937;
+  --color-neutral-700: #374151;
+  --color-neutral-500: #6B7280;
+  --color-neutral-300: #D1D5DB;
+  --color-neutral-100: #F3F4F6;
+  --color-neutral-50: #FAFAFA;
+
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "General Sans", sans-serif;
+
+  --background-hero: linear-gradient(135deg, #0F1F46 0%, #1E3FAF 100%);
+  --background-crimson: linear-gradient(135deg, #9E1C22 0%, #C33A42 100%);
+  --background-gold-accent: linear-gradient(135deg, #D4A937 0%, #F0D27B 100%);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text-dark);
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+  }
+}

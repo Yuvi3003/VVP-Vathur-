@@ -1,0 +1,6 @@
+{
+  "name": "Vishwa Vidhyapeeth Landing Page",
+  "description": "A premium, modern, and high-conversion homepage for Vishwa Vidhyapeeth, a deep-rooted CBSE school in Bengaluru.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
